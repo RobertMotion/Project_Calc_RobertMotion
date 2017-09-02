@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="calc.css">
+</head>
+
+<body>
+    <center>
+        <div class="pic" id="bkground">
+            <img src="onebrickbg.jpeg" />
+
+            <button class="box" id="box1" onclick="numberPressed(this)" value="1">1</button>
+
+            <button class="box" id="box2"onclick="numberPressed(this)" value="2">2</button>
+
+            <button class="box" id="box3"onclick="numberPressed(this)" value="3">3</button>
+
+            <button class="box" id="box4"onclick="numberPressed(this)" value="4">4</button>
+
+            <button class="box" id="box5"onclick="numberPressed(this)" value="5">5</button>
+
+            <button class="box" id="box6"onclick="numberPressed(this)" value="6">6</button>
+
+            <button class="box" id="box7"onclick="numberPressed(this)" value="7">7</button>
+
+            <button class="box" id="box8"onclick="numberPressed(this)" value="8">8</button>
+
+            <button class="box" id="box9"onclick="numberPressed(this)" value="9">9</button>
+
+            <button class="box" id="box0"onclick="numberPressed(this)" value="0">0</button>
+
+            <button class="box" id="plus"onclick="numberPressed(this)" value="+">+</button>
+
+            <button class="box" id="minus"onclick="numberPressed(this)" value="-">-</button>
+
+            <button class="box" id="multiply"onclick="numberPressed(this)" value="*">*</button>
+
+            <button class="box" id="divide"onclick="numberPressed(this)" value="/">/</button>
+
+            <button class="box" id="AC"onclick="clearInput()" value="A/C">A/C</button>
+
+            <button class="box" id="equals"onclick="processEqual()" value="="></button>
+           
+            <input id="inputField" type="text"/>
+            
+            <button class="box" id="avg"onclick="numberPressed(this)" value="AVG">AVG</button>
+            
+        <button id="click" value="CLICK ME!" onclick="chBackcolor()"></button>
+        
+    </center>
+            
+
+    <!--      ****    JavaScript     ****-->
+
+    <script>
+        function chBackcolor() {
+            document.body.style.backgroundColor = "rgba(115, 98, 123, 0.99)";
+        }
+        //Predefined JavaScript function for backgrnd change color...says whnvr bg-color is called, assign it to the color that will be called as  this function's argument(s).
+        function numberPressed(buttonPressed){
+    document.getElementById("inputField").value += buttonPressed.value;
+        }
+
+        function clearInput() {
+     document.getElementById("inputField").value = ""
+        }
+
+        function processEqual() {
+
+            var result = eval(document.getElementById("inputField").value);
+            document.getElementById("inputField").value = result
+        }
+
+    </script>
+
+</body>
+
+</html>
